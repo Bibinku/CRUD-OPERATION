@@ -16,3 +16,6 @@ def save_data(request):
 
     return redirect("Function")
 
+def display(request):
+    data = DataDB.objects.all()
+    return render(request,"display.html",{'data':data})
