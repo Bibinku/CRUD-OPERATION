@@ -19,3 +19,7 @@ def save_data(request):
 def display(request):
     data = DataDB.objects.all()
     return render(request,"display.html",{'data':data})
+
+def editdisplay(request,Nameid):
+    data=DataDB.objects.get(id=Nameid)
+    return render(request,"edit.html",{'data':data})

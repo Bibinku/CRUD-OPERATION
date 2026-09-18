@@ -5,6 +5,8 @@
         <th>Name</th>
         <th>Age</th>
         <th>Place</th>
+        <th>Edit</th>
+
     </tr>
 
     {% for i in data %}
@@ -12,6 +14,14 @@
         <td>{{ i.name }}</td>
         <td>{{ i.age }}</td>
         <td>{{ i.place }}</td>
+        <td>
+            <a href="{% url 'editdisplay' Nameid=i.id %}">
+    <button type="button">Edit</button>
+</a>
+        </td>
+
+
+
     </tr>
     {% endfor %}
 </table>
